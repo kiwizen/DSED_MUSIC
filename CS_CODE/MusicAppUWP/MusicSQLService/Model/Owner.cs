@@ -10,9 +10,9 @@ namespace MusicSQLService.Model
         public static string FirstNameKey { get; } = "FirstName";
         public static string LastNameKey { get; } = "LastName";
 
-        private string _primarykey;
+        
         [DataMember]
-        public string ID { get => _primarykey; } 
+        public string ID { get; set; } 
 
         [DataMember]
         public string FirstName { get; set; }
@@ -20,9 +20,6 @@ namespace MusicSQLService.Model
         [DataMember]
         public string LastName { get; set; }
 
-        public Owner(string id)
-        {
-            _primarykey = id;
-        }
+        public Owner(){ }
     }
 }

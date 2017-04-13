@@ -45,8 +45,9 @@ namespace MusicSQLService
             DataTable table = dataset.Tables[0];
             foreach (DataRow datarow in table.Rows)
             {
-                ownerList.Add(new Owner(datarow[Owner.PrimaryKey] as string)
+                ownerList.Add(new Owner()
                 {
+                    ID = datarow[Owner.PrimaryKey].ToString(),
                     FirstName = datarow[Owner.FirstNameKey] as string,
                     LastName = datarow[Owner.LastNameKey] as string
                 });

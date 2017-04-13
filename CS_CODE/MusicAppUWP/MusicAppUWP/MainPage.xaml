@@ -53,8 +53,8 @@
                                     <Run Text="ID: "/>
                                     <Run Text="{Binding ID}" />
                                 </TextBlock>                                
-                                <TextBlock Style="{StaticResource BasicTitleStyle}">
-                                    <Run Text="Sur Name: "/>
+                                <TextBlock Style="{StaticResource BasicTextStyle}">
+                                    <Run Text="Last Name: "/>
                                     <Run Text="{Binding LastName}" />
                                 </TextBlock>
                                 <TextBlock Style="{StaticResource BasicTextStyle}">
