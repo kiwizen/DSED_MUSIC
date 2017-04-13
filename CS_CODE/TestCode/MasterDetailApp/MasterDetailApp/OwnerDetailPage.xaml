@@ -1,0 +1,46 @@
+﻿<Page
+    x:Class="MasterDetailApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MasterDetailApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Transitions>
+        <TransitionCollection>
+            <NavigationThemeTransition />
+        </TransitionCollection>
+    </Page.Transitions>
+
+    <Page.Resources>
+        <DataTemplate x:Key="OwnerListViewItemTemplate" x:DataType="viewmodels:OwnerItemViewModel">
+            <Grid Margin="0,11,0,13">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="ID :" Style="{ThemeResource BaseTextBlockStyle}" />
+
+                <TextBlock 
+                    Text="First Name" 
+                    Grid.Row="1"
+                    Style="{ThemeResource ListBodyTextBlockStyle}"/>
+
+                <TextBlock 
+                    Text="Last Name" 
+                    Grid.Row="2"
+                    Style="{ThemeResource ListBodyTextBlockStyle}"/>
+            </Grid>
+        </DataTemplate>
+
+
+    </Page.Resources>
+    
+</Page>
