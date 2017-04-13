@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("AccessMusicDB")]
+[assembly: AssemblyTitle("MusicSQLService")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("HP Inc.")]
-[assembly: AssemblyProduct("AccessMusicDB")]
+[assembly: AssemblyProduct("MusicSQLService")]
 [assembly: AssemblyCopyright("Copyright © HP Inc. 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("5fca57dd-86b8-4737-a7cd-92423c126d1a")]
+[assembly: Guid("92065e6e-c2a6-423e-8c3b-962a92f41132")]
 
 // Version information for an assembly consists of the following four values:
 //

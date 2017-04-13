@@ -93,8 +93,14 @@
     <None Include=".dockerignore">
       <DependentUpon>Dockerfile</DependentUpon>
     </None>
-    <None Include="Connected Services\AccessMusicDB\Service.wsdl" />
-    <None Include="Connected Services\AccessMusicDB\Service.xsd">
+    <None Include="Connected Services\MusicSQLService\Service.wsdl" />
+    <None Include="Connected Services\MusicSQLService\Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MusicSQLService\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MusicSQLService\Service2.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Dockerfile" />
@@ -105,7 +111,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\AccessMusicDB\Reference.cs">
+    <Compile Include="Connected Services\MusicSQLService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -113,7 +119,6 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MusicDBClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -123,10 +128,10 @@
     <None Include="MusicAppUWP_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\AccessMusicDB\Service.disco" />
-    <None Include="Connected Services\AccessMusicDB\configuration91.svcinfo" />
-    <None Include="Connected Services\AccessMusicDB\configuration.svcinfo" />
-    <None Include="Connected Services\AccessMusicDB\Reference.svcmap">
+    <None Include="Connected Services\MusicSQLService\Service.disco" />
+    <None Include="Connected Services\MusicSQLService\configuration91.svcinfo" />
+    <None Include="Connected Services\MusicSQLService\configuration.svcinfo" />
+    <None Include="Connected Services\MusicSQLService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -144,6 +149,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Common\StandardStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -153,7 +162,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\AccessMusicDB\" />
+    <WCFMetadataStorage Include="Connected Services\MusicSQLService\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using MusicAppUWP.MusicSQLService;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -25,6 +26,32 @@ namespace MusicAppUWP
         public MainPage()
         {
             this.InitializeComponent();
+        }
+
+        private async void GetButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                ServiceClient client = new ServiceClient();
+                IList<Owner> articleList = await client.QueryOwnerAsync();
+
+                //set the result to UI
+                lvDataTemplates.ItemsSource = articleList;
+            }
+            catch (Exception ex)
+            {
+                NotifyUser(ex.Message);
+            }
+        }
+        // The event handler for the click event of the link in the footer. 
+        private async void HyperlinkButton_Click(object sender, RoutedEventArgs e)
+        {
+            await Windows.System.Launcher.LaunchUriAsync(new Uri("http://blogs.msdn.com/b/onecode"));
+        }
+
+        private void NotifyUser(string message)
+        {
+            StatusBlock.Text = message;
         }
     }
 }
