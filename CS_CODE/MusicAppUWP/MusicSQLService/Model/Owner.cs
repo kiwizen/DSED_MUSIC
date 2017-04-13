@@ -12,7 +12,7 @@ namespace MusicSQLService.Model
 
         private string _primarykey;
         [DataMember]
-        public string ID { get => _primarykey ; } 
+        public string ID { get => _primarykey; } 
 
         [DataMember]
         public string FirstName { get; set; }
