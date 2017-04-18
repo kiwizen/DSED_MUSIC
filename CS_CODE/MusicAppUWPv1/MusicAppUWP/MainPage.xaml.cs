@@ -34,6 +34,7 @@ namespace MusicAppUWP
             try
             {
                 ServiceClient client = new ServiceClient();
+
                 IList<Owner> articleList = await client.QueryOwnerAsync();
 
                 //set the result to UI

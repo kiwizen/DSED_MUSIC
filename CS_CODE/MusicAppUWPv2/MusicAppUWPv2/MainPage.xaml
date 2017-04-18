@@ -6,8 +6,49 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <Page.Resources>
+        <Style x:Key="BasicTitleStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="{StaticResource ApplicationForegroundThemeBrush}"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontFamily" Value="Segoe UI Light"/>
+            <Setter Property="TextTrimming" Value="WordEllipsis"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="Typography.StylisticSet20" Value="True"/>
+            <Setter Property="Typography.DiscretionaryLigatures" Value="True"/>
+        </Style>
+        <Style x:Key="BasicTextStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="{StaticResource ApplicationForegroundThemeBrush}"/>
+            <Setter Property="FontSize" Value="{StaticResource ControlContentThemeFontSize}"/>
+            <Setter Property="FontFamily" Value="Segoe UI Light"/>
+            <Setter Property="TextTrimming" Value="WordEllipsis"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="Typography.StylisticSet20" Value="True"/>
+            <Setter Property="Typography.DiscretionaryLigatures" Value="True"/>
+        </Style>
+    </Page.Resources>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock HorizontalAlignment="Left" Height="36" Margin="26,30,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="220">
+            Music Database App Version 2
+        </TextBlock>
+        <Button Content="GetData" HorizontalAlignment="Left" Height="36" Margin="26,71,0,0" VerticalAlignment="Top" Width="77"/>
+        <ListView x:Name="lvDataTemplates" Margin="20,112,10,328">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Style="{StaticResource BasicTextStyle}">
+                            <Run Text="Last Name: "/>
+                            <Run Text="{Binding LastName}" />
+                        </TextBlock>
+                        <TextBlock Style="{StaticResource BasicTextStyle}">
+                            <Run Text="First Name: "/>
+                            <Run Text="{Binding FirstName}"/>
+                        </TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
 
     </Grid>
 </Page>
