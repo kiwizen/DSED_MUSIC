@@ -14,11 +14,15 @@ namespace MusicSQLService
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service.svc or Service.svc.cs at the Solution Explorer and start debugging.
     public class Service : IService
     {
-        public string SQLConnectionString = 
-            "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Music;" + 
-            "Integrated Security=True;Connect Timeout=30;Encrypt=False;" + 
-            "TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-
+        public string SQLConnectionString =
+            "Server = tcp:kiwizen-dsed.database.windows.net,1433;Initial Catalog = DSED; " +
+            "Persist Security Info=False;User ID = kiwizen-dsed; Password=Monday99; " +
+            "MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout = 30";
+        /*
+        "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Music;" + 
+        "Integrated Security=True;Connect Timeout=30;Encrypt=False;" + 
+        "TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        */
         public IList<Owner> QueryOwner()
         {
             DataSet dataset = new DataSet();

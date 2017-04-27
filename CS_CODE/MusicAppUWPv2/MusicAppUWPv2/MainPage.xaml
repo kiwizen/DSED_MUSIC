@@ -32,7 +32,7 @@
         <TextBlock HorizontalAlignment="Left" Height="36" Margin="26,30,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="220">
             Music Database App Version 2
         </TextBlock>
-        <Button Content="GetData" HorizontalAlignment="Left" Height="36" Margin="26,71,0,0" VerticalAlignment="Top" Width="77"/>
+        <Button Content="GetData" x:Name="GetButton" HorizontalAlignment="Left" Height="36" Margin="26,71,0,0" VerticalAlignment="Top" Width="77" Click="GetButton_Click"/>
         <ListView x:Name="lvDataTemplates" Margin="20,112,10,328">
             <ListView.ItemTemplate>
                 <DataTemplate>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MusicDBService.View" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MusicDBService.View" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:2760/MusicDBService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System" />
+  <xs:complexType name="ViewModelClass">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AddMethod" nillable="true" type="tns:ViewModelClass.AddDelegate" />
+      <xs:element minOccurs="0" name="ClearMethod" nillable="true" type="tns:ViewModelClass.ClearDelegate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewModelClass" nillable="true" type="tns:ViewModelClass" />
+  <xs:complexType name="ViewModelClass.AddDelegate">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/System" base="q1:MulticastDelegate" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ViewModelClass.AddDelegate" nillable="true" type="tns:ViewModelClass.AddDelegate" />
+  <xs:complexType name="ViewModelClass.ClearDelegate">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/System" base="q2:MulticastDelegate" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ViewModelClass.ClearDelegate" nillable="true" type="tns:ViewModelClass.ClearDelegate" />
+</xs:schema>

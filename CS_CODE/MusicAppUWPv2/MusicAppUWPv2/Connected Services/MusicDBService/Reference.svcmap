@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a8d66e9b-737e-463b-8228-3a24537dba7c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:2760/MusicDBService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MusicDBService.wsdl" MetadataType="Wsdl" ID="1ff66d8a-7c6a-4a22-887a-4e41b3387731" SourceId="1" SourceUrl="http://localhost:2760/MusicDBService.svc?wsdl" />
+    <MetadataFile FileName="MusicDBService.disco" MetadataType="Disco" ID="56691f23-228b-4454-b8b0-3a6eb23e6573" SourceId="1" SourceUrl="http://localhost:2760/MusicDBService.svc?disco" />
+    <MetadataFile FileName="MusicDBService.xsd" MetadataType="Schema" ID="79df86f0-b8b9-4f8e-bfdb-2c638a762e12" SourceId="1" SourceUrl="http://localhost:2760/MusicDBService.svc?xsd=xsd0" />
+    <MetadataFile FileName="MusicDBService1.xsd" MetadataType="Schema" ID="a9096c3a-657f-4e10-ba09-ee0622b76d32" SourceId="1" SourceUrl="http://localhost:2760/MusicDBService.svc?xsd=xsd1" />
+    <MetadataFile FileName="MusicDBService2.xsd" MetadataType="Schema" ID="31358ee9-b1f6-44a5-adc8-6db68ea02b86" SourceId="1" SourceUrl="http://localhost:2760/MusicDBService.svc?xsd=xsd2" />
+    <MetadataFile FileName="MusicDBService3.xsd" MetadataType="Schema" ID="76fa47e6-71b7-49db-9d19-98f351c23eae" SourceId="1" SourceUrl="http://localhost:2760/MusicDBService.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -4,6 +4,9 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+//using MusicDBService.Model;
+//using System.Data.SqlClient;
+using MusicDBService.View;
 
 namespace MusicDBService
 {
@@ -11,7 +14,14 @@ namespace MusicDBService
     [ServiceContract]
     public interface IMusicDBService
     {
+        /*
         [OperationContract]
         void DoWork();
+
+        [OperationContract]
+        void GetOwnerRecord();
+        */
+        [OperationContract]
+        void ProcessRecord(ViewModelClass model);
     }
 }
